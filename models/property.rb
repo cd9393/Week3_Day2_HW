@@ -75,7 +75,7 @@ class Property
   db.prepare("all",sql) #(name, sql) name is the reference of the method.
   properties = db.exec_prepared("all")
   db.close()
-  return orders.map{|property_hash|Property.new(property_hash)}
+  return properties.map{|property_hash|Property.new(property_hash)}
   end
 
   def Property.find(id)
